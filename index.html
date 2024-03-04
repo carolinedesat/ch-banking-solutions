@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="" />
+    <link rel="shortcut icon" type="image/png" href="icon.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,10 +11,125 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>CH Banking Solutions</title>
 
+    <title>CH Banking Solutions</title>
+    <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
   </head>
-  <body></body>
+
+  <body>
+
+    <!-- HEADER -->
+    <header class="header">
+      <nav class="nav">
+        <img
+          src="img/logo.png"
+          alt="CH Banking Solutions logo"
+          class="nav_logo"
+          id="logo"
+        />
+        <ul class="nav_links">
+          <li class="nav_item">
+            <a class="nav_link" href="#section-1">Features</a>
+          </li>
+          <li class="nav_item">
+            <a class="nav_link nav_link--btn btn-show-modal" href="#"
+              >Open account</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="header_title">
+        <h1>
+          When
+          <span class="highlight">banking</span>
+          meets<br />
+          <span class="highlight">safety</span>
+        </h1>
+        <h4>Banking security for a safer life.</h4>
+        <button class="btn-text btn-scroll-to">Learn more</button>
+        <img
+          src="img/digital1.jpg"
+          class="header_img"
+          alt="Minimalist bank items"
+        />
+      </div>
+    </header>
+
+    <!-- FEATURES SECTION -->
+    <section class="section" id="section--1">
+      <div class="section_title">
+        <h2 class="section_description">Features</h2>
+        <h3 class="section_header">Everything you need for your money.</h3>
+      </div>
+      <div class="features">
+        <img
+          src="img/digital2-lazy.jpg"
+          data-src="img/digital2.jpg"
+          alt="Online Shopping"
+          class="features_img lazy-img"
+        />
+        <div class="features_feature">
+          <h5 class="features_header">Safety First</h5>
+          <p>Welcome to secure online banking, redefined for your peace of mind! At CH Banking Solutions, we prioritize your security in an ever-evolving digital landscape. Say goodbye to worries about fraud and unauthorized transactions – our advanced technology, driven by machine learning, works tirelessly to detect any suspicious activity.</p>
+      </div>
+    </section>
+
+    <!-- SIGN UP SECTION -->
+    <section class="section section-sign-up">
+      <div class="section_title">
+        <h3 class="section_header">
+            Missed yesterday? No worries. Today's your day to join CH Banking Solutions!
+        </h3>
+      </div>
+      <button class="btn btn-show-modal">Open your free account today!</button>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <ul class="footer_nav">
+        <li class="footer_item">
+          <a class="footer_link" href="#">About</a>
+        </li>
+        <li class="footer_item">
+          <a class="footer_link" href="#">Pricing</a>
+        </li>
+        <li class="footer_item">
+          <a class="footer_link" href="#">Terms of Use</a>
+        </li>
+        <li class="footer_item">
+          <a class="footer_link" href="#">Privacy Policy</a>
+        </li>
+        <li class="footer_item">
+          <a class="footer_link" href="#">Careers</a>
+        </li>
+        <li class="footer_item">
+          <a class="footer_link" href="#">Blog</a>
+        </li>
+        <li class="footer_item">
+          <a class="footer_link" href="#">Contact Us</a>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- SIGN UP MODAL -->
+    <div class="modal hidden">
+      <button class="btn-close-modal">&times;</button>
+      <h2 class="modal_header">
+        Open your account <br />
+        in just <span class="highlight">5 minutes</span>
+      </h2>
+      <form class="modal_form">
+        <label>First Name</label>
+        <input type="text" />
+        <label>Last Name</label>
+        <input type="text" />
+        <label>Email Address</label>
+        <input type="email" />
+        <button class="btn">Next step</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+
+  </body>
 </html>
