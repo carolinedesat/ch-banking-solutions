@@ -110,7 +110,7 @@ img {
 
 .nav.sticky {
   position: fixed;
-  background-color: white;
+  background-color: #eaeaea;
 }
 
 .nav_logo {
@@ -128,10 +128,11 @@ img {
   margin-left: 4rem;
 }
 
-.nav_link {
+.nav_link:link,
+.nav_link:visited {
   font-size: 2rem;
   font-weight: 500;
-  color: inherit;
+  color: #ff2e63;
   text-decoration: none;
   display: block;
   transition: all 0.3s;
@@ -209,7 +210,7 @@ h4 {
   align-self: center;
   justify-self: center;
   width: 70%;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .features_header {
