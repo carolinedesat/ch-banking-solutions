@@ -5,6 +5,11 @@ const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".btn-close-modal");
 const btnOpenModal = document.querySelectorAll(".btn-show-modal");
+const btnScrollTo = document.querySelector(".btn-scroll-to");
+const section1 = document.querySelector("#section-1");
+const header = document.querySelector(".header");
+const nav = document.querySelector(".nav");
+const navLinks = document.querySelector(".nav_links");
 
 //////////////////////////////////////////////////
 // MODAL WINDOW
@@ -30,4 +35,18 @@ document.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
     closeModal();
   }
+});
+
+//////////////////////////////////////////////////
+// "LEARN MORE" BUTTON SCROLLING
+btnScrollTo.addEventListener("click", function (e) {
+  e.preventDefault();
+  section1.scrollIntoView({ behavior: "smooth" });
+});
+
+//////////////////////////////////////////////////
+// "FEATURES" BUTTON SCROLLING
+navLinks.addEventListener("click", function (e) {
+  e.preventDefault();
+  section1.scrollIntoView({ behavior: "smooth" });
 });
