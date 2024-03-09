@@ -318,3 +318,19 @@ h4 {
   visibility: hidden;
   opacity: 0;
 }
+
+/* FOOTER */
+.footer {
+  padding: 10rem 3rem;
+  background-color: #252a34;
+}
+
+.footer_referencing {
+  font-size: 1.4rem;
+  color: white;
+  text-align: center;
+}
+
+a {
+  color: white;
+}

@@ -49,7 +49,11 @@ btnScrollTo.addEventListener("click", function (e) {
 // "FEATURES" BUTTON SCROLLING
 navLinks.addEventListener("click", function (e) {
   e.preventDefault();
-  section1.scrollIntoView({ behavior: "smooth" });
+
+  if (e.target.classList.contains("nav_link")) {
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
 });
 
 //////////////////////////////////////////////////
