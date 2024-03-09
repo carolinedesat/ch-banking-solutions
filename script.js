@@ -10,7 +10,7 @@ const section1 = document.querySelector("#section-1");
 const header = document.querySelector(".header");
 const nav = document.querySelector(".nav");
 const navLinks = document.querySelector(".nav_links");
-const imageTarget = document.querySelector("digital2");
+const imageTarget = document.querySelectorAll("img[data-src]");
 
 //////////////////////////////////////////////////
 // MODAL WINDOW
@@ -68,3 +68,27 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 });
 
 headerObserver.observe(header);
+
+//////////////////////////////////////////////////
+// LAZY LOADING IMAGE
+const loadImage = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.src = entry.target.dataset.src;
+
+  entry.target.addEventListener("load", function () {
+    entry.target.classList.remove("lazy-img");
+  });
+
+  observer.unobserve(entry.target);
+};
+
+const imageObserver = new IntersectionObserver(loadImage, {
+  root: null,
+  threshold: 0,
+  rootMargin: "200px",
+});
+
+imageTarget.forEach((img) => imageObserver.observe(img));
